@@ -3,7 +3,7 @@ import { Instagram, Facebook, Twitter } from "lucide-react";
 import { Card } from "../components/Card";
 export const Socials: FunctionComponent = () => {
   return (
-    <div className="socials flex aic flex-gap p-1">
+    <div className="socials flex aic flex-gap jcc p-1">
       <Card className="social-card">
         <div className="flex fdc flex-gap aic">
           <div className="icon">
