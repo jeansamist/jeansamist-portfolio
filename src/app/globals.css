@@ -17,11 +17,19 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  height: 100vh;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+}
+
+section {
+  scroll-snap-align: start;
+}
+
+.hero {
+  background: url('./../../public/images/hero-bg.jpg') no-repeat center / cover fixed;
+}
+
+.backdrop-blur {
+  backdrop-filter: blur(20px);
 }
