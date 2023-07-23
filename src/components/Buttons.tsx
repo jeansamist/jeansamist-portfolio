@@ -28,7 +28,7 @@ export const ButtonSecondary: FunctionComponent<ButtonProps> = (props) => (
     {...props}
     className={
       props.className +
-      " border border-indigo-700 text-indigo-700 bg-opacity-0 py-2"
+      " border border-indigo-700 text-indigo-700 bg-opacity-0 py-2 hover:text-white hover:bg-indigo-700"
     }
   />
 );
