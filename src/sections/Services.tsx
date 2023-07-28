@@ -1,5 +1,4 @@
-import { ButtonPrimary, ButtonSecondary } from "@/components/Buttons";
-import { Card, ServiceCard } from "@/components/Cards";
+import { ServiceCard } from "@/components/Cards";
 import { FunctionComponent, ReactNode } from "react";
 import Image, { StaticImageData } from "next/image";
 import website_building from "./../../public/images/website-building.jpg";
