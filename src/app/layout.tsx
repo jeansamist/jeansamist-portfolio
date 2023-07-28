@@ -18,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={roboto.className + " dark:bg-slate-950 dark:text-white"}>
+      <body className={roboto.className + " bg-slate-100 text-slate-950"}>
         {children}
       </body>
     </html>

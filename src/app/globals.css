@@ -2,7 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Antonio';
+  src: url('./../../public/fonts/Antonio-Bold.ttf');
+  font-weight: bold;
+  font-style: normal;
+}
+
 :root {
+  --primary: #6f53f4;
+  --primaryOpact: #6e53f46b;
+  --primaryVariant1: #4b4bc4;
+  --primaryVariant1Opact: #4b4bc462;
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -18,8 +29,12 @@
 
 body {
   height: 100vh;
-  overflow-y: auto;
-  scroll-snap-type: y mandatory;
+
+}
+
+html {
+  scroll-behavior: smooth;
+  /* scroll-snap-type: y mandatory; */
 }
 
 section {
@@ -31,5 +46,61 @@ section {
 }
 
 .backdrop-blur {
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(40px);
+}
+
+.backdrop-blur-2 {
+  backdrop-filter: blur(5px);
+}
+
+.topbar .brand {
+  position: relative;
+  font-weight: bold;
+  font-family: 'Antonio', sans-serif;
+}
+
+.topbar .brand .dot {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0.3em;
+  height: 0.3em;
+  border-radius: 50%;
+  transform: translate(calc(100% + 0.2em), calc(-100% + 0.2em));
+  background: var(--primary);
+}
+
+.title-sub {
+  position: relative;
+  font-weight: bold;
+  font-family: 'Antonio', sans-serif;
+}
+
+.title-sub .sub {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  min-width: 120px;
+  width: 10%;
+  height: 0.2em;
+  border-radius: 5em;
+  transform: translate(-50%, 0.5em);
+  background: var(--primary);
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 7px;
+  border-radius: 20px;
+  background: linear-gradient(transparent, var(--primary));
+}
+
+.service-card-img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
 }
