@@ -38,7 +38,7 @@ export const Card: FunctionComponent<CardProps> = ({
       }}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
-      className={`hover:border-[var(--primaryOpact)] border border-slate-300 p-6 rounded-md bg-white transition duration-300 flex flex-col gap-4 shadow-md${
+      className={`hover:border-[var(--primaryOpact)] border border-main_ p-6 rounded-md bg-white transition duration-300 flex flex-col gap-4 shadow-main_${
         className !== undefined ? " " + className : ""
       }`}
     >
@@ -80,8 +80,8 @@ export const ServiceCard: FunctionComponent<ServiceCardProps> = ({
         <div className="name font-bold text-2xl">{name}</div>
         <div className="description">{description}</div>
         <div className="flex justify-center gap-4 items-center">
-          <ButtonPrimary className=" w-full">Ask for a quote</ButtonPrimary>
-          <ButtonSecondary className=" w-full">Archievements</ButtonSecondary>
+          <ButtonPrimary className=" w-full">See more</ButtonPrimary>
+          {/* <ButtonSecondary className=" w-full">Archievements</ButtonSecondary> */}
         </div>
       </div>
     </Card>

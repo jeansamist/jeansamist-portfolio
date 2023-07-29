@@ -39,7 +39,7 @@ export const ServicesSlider: FunctionComponent<{ services: Service[] }> = ({
   return (
     <Carousel onSlide={onSlide}>
       {services.map((service, key) => (
-        <div className="flex justify-center items-center" key={key}>
+        <div className="flex justify-center items-center pb-4" key={key}>
           <ServiceCard
             {...service}
             onMouseEnter={onMouseEnter}

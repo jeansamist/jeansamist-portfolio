@@ -36,8 +36,10 @@ export const Topbar: FunctionComponent = () => {
         duration: 1,
       }}
       className={
-        "topbar w-full p-6 fixed top-0 transition-all duration-300 delay-300 left-0 z-10 bg-slate-100  bg-opacity-0 flex justify-center" +
-        (blur ? " backdrop-blur bg-opacity-70 border-b border-slate-300" : "")
+        "topbar w-full p-6 fixed top-0 transition-all duration-300 delay-300 left-0 z-10 flex justify-center" +
+        (blur
+          ? " bg-main border-b border-main_ shadow-main_"
+          : " bg-transparent")
       }
     >
       <div className="gap-8 lg:w-full xl:w-3/4 2xl:w-2/3 w-full flex justify-between flex-col lg:flex-row items-center content-center">

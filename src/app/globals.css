@@ -14,6 +14,10 @@
   --primaryOpact: rgba(110, 83, 244, 0.3);
   --primaryVariant1: #4b4bc4;
   --primaryVariant1Opact: #4b4bc462;
+  --shadow: #d8e1e8;
+  --border: #d5e3ec;
+  --color: #121c42;
+  --background: #f8fafb;
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;

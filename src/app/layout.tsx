@@ -1,7 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Roboto } from "next/font/google";
-const roboto = Roboto({
+import { Poppins } from "next/font/google";
+const inter = Poppins({
   subsets: ["latin"],
   weight: ["100", "300", "400", "500", "700", "900"],
 });
@@ -18,9 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={roboto.className + " bg-slate-100 text-slate-950"}>
-        {children}
-      </body>
+      <body className={inter.className + " bg-main text-main"}>{children}</body>
     </html>
   );
 }

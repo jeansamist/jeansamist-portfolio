@@ -4,7 +4,7 @@ import Image from "next/image";
 import me from "./../../public/images/me.png";
 export const Hero: FunctionComponent = () => (
   <section id="bio" className="hero w-full min-h-screen">
-    <div className="w-full min-h-screen px-4 from-slate-100 bg-gradient-to-t pt-[80px] pb-8 flex justify-center">
+    <div className="w-full min-h-screen px-4 bg-main_linear_b pt-[80px] pb-8 flex justify-center">
       <div className="content flex flex-col-reverse justify-center items-center gap-16">
         <div className="description text-center flex flex-col gap-6 w-full max-w-[550px]">
           <div className="name text-6xl font-extrabold">
