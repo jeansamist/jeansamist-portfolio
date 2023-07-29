@@ -6,13 +6,16 @@ export const Hero: FunctionComponent = () => (
   <section id="bio" className="hero w-full min-h-screen">
     <div className="w-full min-h-screen px-4 from-slate-100 bg-gradient-to-t pt-[80px] pb-8 flex justify-center">
       <div className="content flex flex-col-reverse justify-center items-center gap-16">
-        <div className="description text-center flex flex-col gap-6">
+        <div className="description text-center flex flex-col gap-6 w-full max-w-[550px]">
           <div className="name text-6xl font-extrabold">
             <div className="line">BAHA</div>
             <div className="line text-[var(--primary)]">EPHRAIM</div>
           </div>
           <div className="bio">
-            I am Ephraim, professional web developer with long time experiance
+            I&apos;m Ephraim, a passionate fullstack developer with over 5 years
+            of experience. I create web and mobile experiences unique, combining
+            a user-friendly interface and powerful features for bring your
+            digital ideas to life the most ambitious.
           </div>
           <div className="buttons flex gap-6 justify-center">
             <ButtonPrimary className="w-full">Contact Me</ButtonPrimary>

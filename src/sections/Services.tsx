@@ -1,45 +1,42 @@
 import { ServiceCard } from "@/components/Cards";
 import { FunctionComponent, ReactNode } from "react";
 import Image, { StaticImageData } from "next/image";
-import website_building from "./../../public/images/website-building.jpg";
-import app_building from "./../../public/images/app-building.jpg";
+import website_development from "./../../public/images/website_development.svg";
+import mobile_app_development from "./../../public/images/mobile_app_development.svg";
+import api_development from "./../../public/images/api_development.svg";
+import features from "./../../public/images/features.jpg";
+import performanceImg from "./../../public/images/performance.jpg";
 import illustration from "./../../public/images/services.svg";
 import { Carousel } from "@/components/Carousel";
 import Service from "@/types/Service";
 import { ServicesSlider } from "@/components/ServicesSlider";
+import { Line } from "@/components/Line";
 export const Services: FunctionComponent = () => {
   const services: Service[] = [
     {
-      name: "Professional website construction",
-      image: website_building,
-      description: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci ea
-      repellendus mollitia corporis consectetur doloremque error in aliquam
-      facere! Repellat earum pariatur aspernatur itaque porro illum similique
-      beatae omnis modi.`,
+      name: "https://watapp-kov2iftff-jeansamist-gmailcom.vercel.app/watapp/dashboard/x0OrFc0WcjSzOfOpj2Jf6cjMrUWnyZ Development of professional websites",
+      image: website_development,
+      description: `Creation of personalized websites, ranging from showcase sites to online shops, using modern web technologies to guarantee an optimal user experience.`,
     },
     {
-      name: "Professional website construction",
-      image: app_building,
-      description: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci ea
-      repellendus mollitia corporis consectetur doloremque error in aliquam
-      facere! Repellat earum pariatur aspernatur itaque porro illum similique
-      beatae omnis modi.`,
+      name: "Mobile application development",
+      image: mobile_app_development,
+      description: `Design and creation of mobile applications for iOS and Android platforms, providing usability and advanced functionality`,
     },
     {
-      name: "Professional website construction",
-      image: website_building,
-      description: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci ea
-      repellendus mollitia corporis consectetur doloremque error in aliquam
-      facere! Repellat earum pariatur aspernatur itaque porro illum similique
-      beatae omnis modi.`,
+      name: "API development",
+      image: api_development,
+      description: `Creation of application programming interfaces (APIs) to enable communication between different applications and services.`,
     },
     {
-      name: "Professional website construction",
-      image: website_building,
-      description: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci ea
-      repellendus mollitia corporis consectetur doloremque error in aliquam
-      facere! Repellat earum pariatur aspernatur itaque porro illum similique
-      beatae omnis modi.`,
+      name: "Development of custom features",
+      image: features,
+      description: `Creation of specific functionalities adapted to the unique needs of each project`,
+    },
+    {
+      name: "Performance optimization",
+      image: performanceImg,
+      description: `Improved performance of websites and applications for faster navigation and an optimized user experience`,
     },
   ];
   return (
@@ -51,14 +48,16 @@ export const Services: FunctionComponent = () => {
         <div className="content flex flex-col mx-auto gap-28 lg:w-full xl:w-3/4 2xl:w-2/3 w-full">
           <div className="text flex flex-col mx-auto gap-14">
             <div className="title-sub font-bold text-6xl mt-28">
-              Services
-              <div className="sub"></div>
+              SERVICES
+              <Line />
             </div>
             <div className="short-text px-8">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptatem asperiores, alias, facilis necessitatibus dolorum ut
-              deserunt maxime culpa dolore delectus commodi maiores id suscipit
-              aliquid doloribus voluptatum accusantium dicta est.
+              Do you have digital projects that require the expertise of a
+              freelance fullstack developer? I&apos;m here for you ! With
+              technical versatility and a passion for innovation, I turn your
+              ideas into reality. Together, let&apos;s create tailor-made web
+              and mobile solutions, adapted to your needs and ready to exceed
+              your expectations. I therefore offer you several of my services
             </div>
           </div>
           <div className="flex flex-row-reverse">

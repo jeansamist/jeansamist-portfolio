@@ -10,8 +10,8 @@
 }
 
 :root {
-  --primary: #6f53f4;
-  --primaryOpact: #6e53f46b;
+  --primary: #6D63FF;
+  --primaryOpact: rgba(110, 83, 244, 0.3);
   --primaryVariant1: #4b4bc4;
   --primaryVariant1Opact: #4b4bc462;
   --foreground-rgb: 0, 0, 0;
@@ -102,7 +102,7 @@ section {
 .service-card-img {
   width: 100%;
   height: 230px;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 /* Slider Styles */
