@@ -1,5 +1,10 @@
 "use client";
-import { FunctionComponent, PropsWithChildren, ReactNode } from "react";
+import {
+  FunctionComponent,
+  MouseEventHandler,
+  PropsWithChildren,
+  ReactNode,
+} from "react";
 import { motion } from "framer-motion";
 import { ButtonPrimary, ButtonSecondary } from "./Buttons";
 import Image, { StaticImageData } from "next/image";
@@ -7,6 +12,8 @@ export type CardProps = PropsWithChildren<{
   className?: string;
   title?: ReactNode;
   footer?: ReactNode;
+  onMouseEnter?: MouseEventHandler;
+  onMouseLeave?: MouseEventHandler;
 }>;
 
 export const Card: FunctionComponent<CardProps> = ({
@@ -14,21 +21,23 @@ export const Card: FunctionComponent<CardProps> = ({
   className,
   title,
   footer,
+  onMouseEnter,
+  onMouseLeave,
 }) => {
   return (
     <motion.div
       initial={{
         opacity: 0,
-        y: "-1em",
       }}
       whileInView={{
         opacity: 1,
-        y: 0,
       }}
       transition={{
         delay: 0.5,
         duration: 0.5,
       }}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
       className={`hover:border-[var(--primaryOpact)] border border-slate-300 p-6 rounded-md bg-white transition duration-300 flex flex-col gap-4 shadow-md${
         className !== undefined ? " " + className : ""
       }`}
@@ -40,19 +49,27 @@ export const Card: FunctionComponent<CardProps> = ({
   );
 };
 
-export type ServiceCardProps = PropsWithChildren<{
-  name: ReactNode;
-  image: string | StaticImageData;
-  description: ReactNode;
-}>;
+export type ServiceCardProps = PropsWithChildren<
+  {
+    name: ReactNode;
+    image: string | StaticImageData;
+    description: ReactNode;
+  } & CardProps
+>;
 
 export const ServiceCard: FunctionComponent<ServiceCardProps> = ({
   name,
   description,
   image,
+  onMouseEnter,
+  onMouseLeave,
 }) => {
   return (
-    <Card className="max-w-[400px] w-full">
+    <Card
+      className="max-w-[400px] w-full"
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
+    >
       <div className="flex flex-col gap-4">
         <Image
           src={image}
