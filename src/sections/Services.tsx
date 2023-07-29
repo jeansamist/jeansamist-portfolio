@@ -40,7 +40,7 @@ export const Services: FunctionComponent = () => {
       id="services"
       className="w-full min-h-screen text-center transition-all duration-1000 delay-200 zoom-init"
     >
-      <div className="linear-bg bg-main_linear_t2 pb-28 backdrop-blur-xl transition-all duration-500 delay-200">
+      <div className="linear-bg bg-main_linear_tb pb-28 backdrop-blur-xl transition-all duration-500 delay-200">
         <div className="content flex flex-col mx-auto gap-28 lg:w-full xl:w-3/4 2xl:w-2/3 w-full">
           <div className="text flex flex-col mx-auto gap-14">
             <div className="title-sub font-bold text-6xl mt-28">

@@ -23,6 +23,8 @@ module.exports = {
       backgroundImage: {
         main_linear_t: "linear-gradient(var(--background), transparent)",
         main_linear_t2: "linear-gradient(var(--background) 40%, transparent)",
+        main_linear_tb:
+          "linear-gradient(var(--background) 30%, transparent, var(--background))",
         main_linear_b:
           "linear-gradient(to top, var(--background), transparent)",
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

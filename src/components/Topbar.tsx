@@ -50,7 +50,7 @@ export const Topbar: FunctionComponent = () => {
         <div className="hidden links md:flex gap-8 flex-col md:flex-row items-center content-center">
           <a href="#bio">Biography</a>
           <a href="#services">Services</a>
-          <a href="/">Experiance</a>
+          <a href="#experience">Experience</a>
           <a href="/">Works and Projects</a>
           <a
             href="/"
