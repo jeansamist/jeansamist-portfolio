@@ -38,7 +38,7 @@ export const Topbar: FunctionComponent = () => {
       className={
         "topbar w-full p-6 fixed top-0 transition-all duration-300 delay-300 left-0 z-10 flex justify-center" +
         (blur
-          ? " bg-main border-b border-main_ shadow-main_"
+          ? " bg-white border-b border-main_ shadow-main_"
           : " bg-transparent")
       }
     >
