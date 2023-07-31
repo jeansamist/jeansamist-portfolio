@@ -49,13 +49,11 @@ export const Card: FunctionComponent<CardProps> = ({
   );
 };
 
-export type ServiceCardProps = PropsWithChildren<
-  {
-    name: ReactNode;
-    image: string | StaticImageData;
-    description: ReactNode;
-  } & CardProps
->;
+export type ServiceCardProps = {
+  name: ReactNode;
+  image: string | StaticImageData;
+  description: ReactNode;
+} & CardProps;
 
 export const ServiceCard: FunctionComponent<ServiceCardProps> = ({
   name,
@@ -73,7 +71,7 @@ export const ServiceCard: FunctionComponent<ServiceCardProps> = ({
       <div className="flex flex-col gap-4">
         <Image
           src={image}
-          alt="management softwares"
+          alt={name ? name.toString() : ""}
           className="service-card-img rounded"
           priority={false}
         />
@@ -87,3 +85,44 @@ export const ServiceCard: FunctionComponent<ServiceCardProps> = ({
     </Card>
   );
 };
+
+export type ExperienceCardProps = {
+  image: string | StaticImageData;
+  ets_name: string;
+  start: Date;
+  end: false | Date;
+  description: ReactNode;
+} & CardProps;
+
+export const ExperienceCard: FunctionComponent<ExperienceCardProps> = ({
+  image,
+  title,
+  ets_name,
+  start,
+  end,
+  description,
+}) => (
+  <Card className="w-full sm:w-[350px] md:w-[45%] xl:w-full">
+    <div className="flex gap-4 flex-col xl:flex-row items-center">
+      <Image
+        src={image}
+        alt={title ? title.toString() : ""}
+        className="w-[150px] h-[150px] object-contain"
+        priority={false}
+      />
+      <div className="flex flex-col gap-4 xl:text-left">
+        <div className="flex gap-2 flex-col">
+          <div className="title font-bold text-2xl">{title}</div>
+          <div className="text-xs opacity-80">
+            {ets_name} | {start.toDateString()}{" "}
+            {end !== false && "- " + end.toDateString()}
+          </div>
+          <div className="text-xs opacity-80 text-primary">
+            {end === false && "I'm working there"}
+          </div>
+        </div>
+        <div className="description">{description}</div>
+      </div>
+    </div>
+  </Card>
+);

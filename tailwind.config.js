@@ -19,6 +19,7 @@ module.exports = {
       },
       colors: {
         main: "var(--color)",
+        primary: "var(--primary)",
       },
       backgroundImage: {
         main_linear_t: "linear-gradient(var(--background), transparent)",
