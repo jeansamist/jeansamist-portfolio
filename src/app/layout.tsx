@@ -11,6 +11,9 @@ export const metadata: Metadata = {
   applicationName: "Jeansamits Portfolio",
   creator: "jeansamist",
   description: "BAHA Ephraim (Jeansamist) portfolio",
+  other: {
+    "google-site-verification": "P92hAh_5MLeYb0zFXJW_SxRZPzgvyh0oZ0-e5CcxYzc",
+  },
 };
 
 export default function RootLayout({
