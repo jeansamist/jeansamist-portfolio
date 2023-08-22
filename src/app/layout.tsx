@@ -21,7 +21,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="bg-main text-main">
         <Topbar />
-        <ScrollArea className="h-[calc(100vh-65px)] w-full rounded-md">
+        <ScrollArea className="h-[calc(100vh-160px)] md:h-[calc(100vh-65px)] w-full rounded-md">
           <div className="main">{children}</div>
         </ScrollArea>
       </body>
