@@ -1,14 +1,10 @@
-import "./globals.css";
+import { Topbar } from "@/components/Topbar";
+import "@/styles/globals.css";
+import { ScrollArea } from "@/components/ui/scroll-area";
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
-const inter = Poppins({
-  subsets: ["latin"],
-  weight: ["100", "300", "400", "500", "700", "900"],
-});
-
 export const metadata: Metadata = {
   title: "BAHA Ephraim - Fullstack Developer",
-  applicationName: "Jeansamits Portfolio",
+  applicationName: "Jeansamist Portfolio",
   creator: "jeansamist",
   description: "BAHA Ephraim (Jeansamist) portfolio",
   other: {
@@ -23,7 +19,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className + " bg-main text-main"}>{children}</body>
+      <body className="bg-main text-main">
+        <Topbar />
+        <ScrollArea className="h-[calc(100vh-65px)] w-full rounded-md">
+          <div className="main">{children}</div>
+        </ScrollArea>
+      </body>
     </html>
   );
 }
