@@ -6,7 +6,7 @@ export const HomeHero: FunctionComponent = ({
   ...props
 }: React.HTMLAttributes<HTMLElement>) => {
   return (
-    <div className="hero w-full h-[calc(100vh-65px)]">
+    <div className="hero w-full h-[calc(100vh-160px)] md:h-[calc(100vh-65px)] min-h-[830px] md:min-h-[auto]">
       <div className="content w-full h-full bg-gradient-to-b from-white to-transparent">
         <div className="container h-full flex flex-col md:flex-row-reverse md:gap-16 items-center justify-around">
           <Image

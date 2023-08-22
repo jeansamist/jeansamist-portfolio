@@ -22,10 +22,6 @@ export const Topbar: FunctionComponent = ({
       href: "#skills",
     },
     {
-      children: "Experience",
-      href: "#experience",
-    },
-    {
       children: "Work",
       href: "#work",
     },
