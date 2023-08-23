@@ -1,6 +1,9 @@
 import { FunctionComponent } from "react";
 import Image from "next/image";
 import me from "@/images/me.png";
+import { Button } from "./ui/button";
+import { AtSign, Github, Instagram, Twitter } from "lucide-react";
+import Link from "next/link";
 export const HomeHero: FunctionComponent = ({
   className,
   ...props
@@ -27,6 +30,30 @@ export const HomeHero: FunctionComponent = ({
               <b>5 years of experience</b>. I create web and mobile experiences
               unique, combining a user-friendly interface and powerful features
               for bring your digital ideas to life the most ambitious
+            </div>
+            <div className="mt-4 flex items-center space-x-4">
+              <Button className="space-x-2">
+                <AtSign />
+                <div>Contact Me</div>
+              </Button>
+              <Link
+                className="text-primary"
+                href={"https://www.instagram.com/i.am.ephra"}
+              >
+                <Instagram />
+              </Link>
+              <Link
+                className="text-primary"
+                href={"https://twitter.com/jeansamist"}
+              >
+                <Twitter />
+              </Link>
+              <Link
+                className="text-primary"
+                href={"https://github.com/jeansamist"}
+              >
+                <Github />
+              </Link>
             </div>
           </div>
         </div>
