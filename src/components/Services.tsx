@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 import api_development from "@/images/api_development.svg";
 import custom_features from "@/images/custom_features.svg";
 import mobile_app_development from "@/images/mobile_app_development.svg";
@@ -6,7 +6,7 @@ import performance_optimization from "@/images/performance_optimization.svg";
 import website_development from "@/images/website_development.svg";
 import { Service } from "@/types/Service";
 import { FunctionComponent } from "react";
-import { Carousel } from "./Carousel";
+// import { Carousel } from "./Carousel";
 import { ServiceCard } from "./ServiceCard";
 export const Services: FunctionComponent = ({
   ...props
@@ -48,7 +48,7 @@ export const Services: FunctionComponent = ({
       <div className="title text-5xl font-extrabold mb-16 text-center">
         SERVICES
       </div>
-      {window.innerWidth > 1268 ? (
+      {/* {window.innerWidth > 1268 ? (
         <Carousel slidesVisibles={3} slidesToScrool={1}>
           {services.map((service) => (
             <div className="px-4" key={service.title}>
@@ -56,13 +56,13 @@ export const Services: FunctionComponent = ({
             </div>
           ))}
         </Carousel>
-      ) : (
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {services.map((service) => (
-            <ServiceCard key={service.title} {...service} />
-          ))}
-        </div>
-      )}
+      ) : ( */}
+      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        {services.map((service) => (
+          <ServiceCard key={service.title} {...service} />
+        ))}
+      </div>
+      {/* )} */}
     </div>
   );
 };
