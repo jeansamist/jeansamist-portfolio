@@ -1,6 +1,7 @@
 import { FunctionComponent } from "react";
 // import { Card } from "./ui/card";
 import project1 from "@/images/project1.png";
+import logo from "@/images/jeansamist_logo_form.svg";
 import Image from "next/image";
 import {
   Card,
@@ -9,7 +10,7 @@ import {
   CardHeader,
   CardTitle,
 } from "./ui/card";
-import { Badge } from "./ui/badge";
+import { Badge, badgeVariants } from "./ui/badge";
 import Link from "next/link";
 export const Works: FunctionComponent = ({
   ...props
@@ -19,20 +20,30 @@ export const Works: FunctionComponent = ({
       <div className="title text-5xl font-extrabold mb-16 text-center">
         WORKS
       </div>
-      <div className="grid">
+      <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
         <Card>
-          <CardHeader>
-            <div className="mb-4">
+          <CardHeader className="">
+            <div className="mb-4 relative">
               <Image
                 src={project1}
                 alt="BAHA Ephraim portfolio"
-                className="rounded w-full"
+                className="rounded w-full "
               />
+              <div className=" right-4 bottom-0 p-2 rounded-full   overflow-hidden absolute bg-white transform translate-y-[50%]">
+                <Image src={logo} alt="Jeansamist logo" className="w-16" />
+              </div>
             </div>
             <CardTitle className="text-primary">Jeansamist Portfolio</CardTitle>
             <CardDescription>My personal portfolio</CardDescription>
           </CardHeader>
-          <CardFooter>{/* <Link ></Link> */}</CardFooter>
+          <CardFooter className="space-x-2">
+            <Link className={badgeVariants()} href={"#"}>
+              React
+            </Link>
+            <Link className={badgeVariants()} href={"#"}>
+              Tailwind
+            </Link>
+          </CardFooter>
         </Card>
       </div>
     </div>
