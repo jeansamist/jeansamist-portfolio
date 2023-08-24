@@ -1,5 +1,4 @@
 import { Card } from "./ui/card";
-import { AiFillHtml5 } from "react-icons/ai";
 import { CircularProgressBar } from "./CircularProgress";
 import { CardHeader, CardContent } from "./ui/card";
 import { FunctionComponent } from "react";
@@ -13,15 +12,15 @@ export const SkillCard: FunctionComponent<Skill & { icon: IconType }> = ({
   icon: Icon,
 }) => {
   return (
-    <Card>
-      <CardHeader className="flex flex-row justify-between items-center">
+    <Card className="relative overflow-hidden">
+      <CardHeader className="flex flex-row justify-between items-center relative z-10">
         <div className="text-lg font-bold">{title}</div>
         <div className="flex gap-2 items-center text-muted-foreground">
           <Folder size={18} />
           <div>Projects</div>
         </div>
       </CardHeader>
-      <CardContent>
+      <CardContent className=" relative z-10">
         <div className="flex gap-4 w-full">
           <div className="w-[calc(100%-100px-1rem)] flex items-center">
             <div className="text-6xl font-extrabold">
@@ -36,6 +35,10 @@ export const SkillCard: FunctionComponent<Skill & { icon: IconType }> = ({
           />
         </div>
       </CardContent>
+      <div className="opacity-10 text-primary">
+        {/* <Icon size={150} className="absolute top-[-40%] left-8 z-0" /> */}
+        <Icon size={150} className="absolute bottom-[-40%] left-8 z-0" />
+      </div>
     </Card>
   );
 };

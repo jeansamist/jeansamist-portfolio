@@ -1,21 +1,57 @@
-import Image from "next/image";
 import { FunctionComponent } from "react";
-import { Card, CardContent, CardHeader } from "./ui/card";
-import { CircularProgressBar } from "./CircularProgress";
-import { AiFillHtml5 } from "react-icons/ai";
+import {
+  FaHtml5,
+  FaCss3Alt,
+  FaJsSquare,
+  FaReact,
+  FaPython,
+  FaPhp,
+  FaNodeJs,
+} from "react-icons/fa";
+import { DiDjango, DiLaravel, DiMongodb, DiMysql } from "react-icons/di";
 import { SkillCard } from "./SkillCard";
 export const Skills: FunctionComponent = ({
   ...props
 }: React.HTMLAttributes<HTMLElement>) => {
-  const percentage = 66;
   return (
     <div className="skills container py-16">
       <div className="title text-5xl font-extrabold mb-16 text-center">
         SKILLS
       </div>
+      <div className="text-2xl text-primary text-center font-bold mb-16">
+        Frontend technologies
+      </div>
       <div className="grid gap-8 md:grid-cols-3">
-        <SkillCard title="HTML" percentage={percentage} icon={AiFillHtml5} />
-        <SkillCard title="CSS" percentage={percentage} icon={AiFillHtml5} />
+        <SkillCard title="HTML 5" percentage={90} icon={FaHtml5} />
+        <SkillCard title="CSS 3" percentage={95} icon={FaCss3Alt} />
+        <SkillCard title="JavaScript" percentage={80} icon={FaJsSquare} />
+      </div>
+      <div className="text-2xl text-center text-primary font-bold my-16">
+        Backend technologies
+      </div>
+      <div className="grid gap-8 md:grid-cols-3">
+        <SkillCard title="Python" percentage={80} icon={FaPython} />
+        <SkillCard title="PHP" percentage={70} icon={FaPhp} />
+        <SkillCard title="NodeJS" percentage={55} icon={FaNodeJs} />
+      </div>
+      <div className="text-2xl text-center text-primary font-bold my-16">
+        Frameworks
+      </div>
+      <div className="grid gap-8 md:grid-cols-3">
+        <SkillCard
+          title="React & React Native"
+          percentage={75}
+          icon={FaReact}
+        />
+        <SkillCard title="Django" percentage={70} icon={DiDjango} />
+        <SkillCard title="Laravel" percentage={65} icon={DiLaravel} />
+      </div>
+      <div className="text-2xl text-center text-primary font-bold my-16">
+        Database
+      </div>
+      <div className="grid gap-8 md:grid-cols-3">
+        <SkillCard title="MySQL" percentage={75} icon={DiMysql} />
+        <SkillCard title="MongoDB" percentage={65} icon={DiMongodb} />
       </div>
     </div>
   );
