@@ -18,26 +18,24 @@ export const Skills: FunctionComponent = ({
       <div className="title text-5xl font-extrabold mb-16 text-center">
         SKILLS
       </div>
-      <div className="text-2xl text-primary text-center font-bold mb-16">
+      <div className="text-2xl text-primary font-bold mb-4">
         Frontend technologies
       </div>
-      <div className="grid gap-8 md:grid-cols-3">
+      <div className="grid gap-4">
         <SkillCard title="HTML 5" percentage={90} icon={FaHtml5} />
         <SkillCard title="CSS 3" percentage={95} icon={FaCss3Alt} />
         <SkillCard title="JavaScript" percentage={80} icon={FaJsSquare} />
       </div>
-      <div className="text-2xl text-center text-primary font-bold my-16">
+      <div className="text-2xl text-primary font-bold my-4">
         Backend technologies
       </div>
-      <div className="grid gap-8 md:grid-cols-3">
+      <div className="grid gap-4">
         <SkillCard title="Python" percentage={80} icon={FaPython} />
         <SkillCard title="PHP" percentage={70} icon={FaPhp} />
         <SkillCard title="NodeJS" percentage={55} icon={FaNodeJs} />
       </div>
-      <div className="text-2xl text-center text-primary font-bold my-16">
-        Frameworks
-      </div>
-      <div className="grid gap-8 md:grid-cols-3">
+      <div className="text-2xl text-primary font-bold my-4">Frameworks</div>
+      <div className="grid gap-4">
         <SkillCard
           title="React & React Native"
           percentage={75}
@@ -46,10 +44,8 @@ export const Skills: FunctionComponent = ({
         <SkillCard title="Django" percentage={70} icon={DiDjango} />
         <SkillCard title="Laravel" percentage={65} icon={DiLaravel} />
       </div>
-      <div className="text-2xl text-center text-primary font-bold my-16">
-        Database
-      </div>
-      <div className="grid gap-8 md:grid-cols-3">
+      <div className="text-2xl text-primary font-bold my-4">Database</div>
+      <div className="grid gap-4">
         <SkillCard title="MySQL" percentage={75} icon={DiMysql} />
         <SkillCard title="MongoDB" percentage={65} icon={DiMongodb} />
       </div>
