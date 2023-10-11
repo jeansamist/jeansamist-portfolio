@@ -15,7 +15,7 @@ export const HomeHero: FunctionComponent = ({
         <div className="w-full md:w-[400px] h-[600px] bg-white rounded-2xl flex justify-center relative z-0 content-end items-end overflow-hidden">
           <Image src={me} alt="me" className="max-w-none w-[200%]" />
         </div>
-        <div className="text-center lg:text-left mt-8  xl:text-xl">
+        <div className="text-center lg:text-left mt-8">
           <div className="mb-1">Hi there, I'm</div>
           <h1 className="text-4xl lg:text-5xl xl:text-7xl font-black">
             BAHA Ephraim

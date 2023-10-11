@@ -1,5 +1,5 @@
 // import { HomeHero } from "@/components/HomeHero";
-// import { Services } from "@/components/Services";
+import { Services } from "@/components/Services";
 // import { Skills } from "@/components/Skills";
 // import { Topbar } from "@/components/Topbar";
 // import { Works } from "@/components/Works";
@@ -18,8 +18,9 @@ import { HomeHero } from "@/components/HomeHero";
 
 export default function Home() {
   return (
-    <div>
+    <div className="  xl:text-xl">
       <HomeHero />
+      <Services />
     </div>
   );
 }
