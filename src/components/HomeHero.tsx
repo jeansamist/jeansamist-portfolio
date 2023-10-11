@@ -16,7 +16,7 @@ export const HomeHero: FunctionComponent = ({
           <Image src={me} alt="me" className="max-w-none w-[200%]" />
         </div>
         <div className="text-center lg:text-left mt-8">
-          <div className="mb-1">Hi there, I'm</div>
+          <div className="mb-1">Hi there, I&apos;m</div>
           <h1 className="text-4xl lg:text-5xl xl:text-7xl font-black">
             BAHA Ephraim
           </h1>

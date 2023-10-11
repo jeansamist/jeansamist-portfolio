@@ -90,7 +90,7 @@ export const Services: FunctionComponent = ({
             Services
           </div>
           <p className="text-center lg:text-2xl">
-            I'am offering a large variety of services as a developer
+            I&apos;am offering a large variety of services as a developer
           </p>
         </div>
         <div className="flex flex-col lg:flex-row justify-between">
