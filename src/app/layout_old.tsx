@@ -1,5 +1,4 @@
 import { Topbar } from "@/components/Topbar";
-import { Balls } from "@/components/balls";
 import "@/styles/globals.css";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import type { Metadata } from "next";
@@ -20,14 +19,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
-        <Balls />
-        <main className="relative z-10 min-h-screen text-violet-950">
-          <Topbar />
-          <ScrollArea className="h-[calc(100vh-103.25px)] md:h-[calc(100vh-65px)] w-full">
-            <div className="main">{children}</div>
-          </ScrollArea>
-        </main>
+      <body className="bg-main text-main">
+        <Topbar />
+        <ScrollArea className="h-[calc(100vh-104px)] md:h-[calc(100vh-65px)] w-full bg-black">
+          <div className="main">{children}</div>
+        </ScrollArea>
       </body>
     </html>
   );

@@ -31,7 +31,7 @@ export const Topbar: FunctionComponent = ({
     },
   ];
   return (
-    <div className="border-b bg-white">
+    <div className="bg-transparent">
       <div className="container flex flex-col md:flex-row md:justify-between md:h-16 gap-4 items-center p-4">
         <div className="brand">
           <Image src={logo_text} alt="jeansamist_logo" width={150} />
@@ -44,19 +44,12 @@ export const Topbar: FunctionComponent = ({
             <Link
               href={link.href}
               key={link.children}
-              className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+              className="text-sm font-medium text-violet-950 text-muted-foreground transition-colors hover:text-violet-600"
             >
               {link.children}
             </Link>
           ))}
         </nav>
-        <div className="flex items-center w-full md:w-auto">
-          <Input
-            type="search"
-            placeholder="Search..."
-            className="w-full md:w-[100px] lg:w-[300px]"
-          />
-        </div>
       </div>
     </div>
   );
