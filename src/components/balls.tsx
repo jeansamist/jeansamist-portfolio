@@ -11,10 +11,10 @@ export const Balls: FunctionComponent = () => {
   }, []);
 
   return (
-    <div className="fixed h-screen w-screen overflow-hidden blur-3xl top-0 left-0 z-0 bg-white">
+    <div className="fixed h-screen w-screen overflow-hidden blur-xl top-0 left-0 z-0 bg-white">
       <div className="balls relative h-screen w-screen overflow-hidden">
         <div
-          className="w-40 h-40 bg-violet-600 rounded-full absolute translate-x-2/3 -translate-y-1/2"
+          className="w-40 h-40 bg-zinc-50 rounded-full absolute translate-x-2/3 -translate-y-1/2"
           style={{
             top: `${mouse.y + Math.random() * 50}px`,
             left: `${mouse.x + Math.random() * 50}px`,
@@ -22,7 +22,7 @@ export const Balls: FunctionComponent = () => {
           }}
         ></div>
         <div
-          className="w-64 h-64 bg-violet-800 rounded-full absolute -translate-x-1/4 -translate-y-1/4"
+          className="w-64 h-64 bg-zinc-100 rounded-full absolute -translate-x-1/4 -translate-y-1/4"
           style={{
             top: `${mouse.y + Math.random() * 50 - 100}px`,
             left: `${mouse.x + Math.random() * 50 - 200}px`,
@@ -30,7 +30,7 @@ export const Balls: FunctionComponent = () => {
           }}
         ></div>
         <div
-          className="w-60 h-60 bg-violet-500 rounded-full absolute -translate-x-2/3 translate-y-1/2"
+          className="w-60 h-60 bg-zinc-200 rounded-full absolute -translate-x-2/3 translate-y-1/2"
           style={{
             top: `${mouse.y + Math.random() * 50 + 100}px`,
             left: `${mouse.x + Math.random() * 50 + 100}px`,

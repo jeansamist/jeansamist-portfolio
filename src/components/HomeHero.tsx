@@ -1,29 +1,54 @@
-import { FunctionComponent } from "react";
-import Image from "next/image";
+"use client";
+import { FunctionComponent, useState, useEffect } from "react";
 import me from "@/images/me.png";
-import { Button } from "./ui/button";
+import Image from "next/image";
+
 import { AtSign, Github, Instagram, Twitter, ArrowDown01 } from "lucide-react";
 import Link from "next/link";
-import { Swipedown } from "./swipedown";
+import { TypingEffect } from "./TypingEffect";
+import { motion } from "framer-motion";
 export const HomeHero: FunctionComponent = ({
   className,
   ...props
 }: React.HTMLAttributes<HTMLElement>) => {
   return (
-    <div className="hero bg-violet-200 px-8  py-8 w-[calc(100%-64px)] h-min-[calc(100vh-103.25px-32px)]  md:h-min-[calc(100vh-64px-32px)] md:h-[calc(100vh-64px-32px)] translate-x-[32px] rounded-3xl relative">
-      <div className="lg:container h-full md:flex md:flex-col md:items-center lg:flex-row-reverse lg:justify-between">
-        <div className="w-full md:w-[400px] h-[600px] bg-white rounded-2xl flex justify-center relative z-0 content-end items-end overflow-hidden">
-          <Image src={me} alt="me" className="max-w-none w-[200%]" />
-        </div>
-        <div className="text-center lg:text-left mt-8">
-          <div className="mb-1">Hi there, I&apos;m</div>
-          <h1 className="text-4xl lg:text-5xl xl:text-7xl font-black">
-            BAHA Ephraim
-          </h1>
-          <div className="mt-4">
-            Fullstack developer | Web and mobile developer
+    <div className="w-full min-h-screen h-[calc(100vh-100px)] h-min-[calc(100vh-100px)]  md:h-min-[calc(100vh-64px)] md:h-[calc(100vh-64px)] ">
+      <div className="container h-full flex items-center justify-center">
+        <div className="flex flex-col space-y-16 items-center">
+          <div className="w-64 h-64 overflow-hidden rounded-full bg-zinc-800">
+            <Image src={me} className="w-64 h-64 object-cover" alt="me" />
           </div>
-          <div className="mt-4 flex items-center justify-center lg:justify-start space-x-4">
+          <div>
+            <div className="text-4xl font-bold text-center leading-tight">
+              Hi I&apos;m{" "}
+              <motion.span
+                initial={{ opacity: 0 }}
+                transition={{ duration: 0.5 }}
+                animate={{ opacity: 1 }}
+                className="font-mono bg-zinc-900 text-white px-2"
+              >
+                <TypingEffect text="BAHA Ephraim" />
+              </motion.span>
+              ,
+              <br /> But you can call me{" "}
+              <motion.span
+                initial={{ opacity: 0 }}
+                transition={{ duration: 1 }}
+                animate={{ opacity: 1 }}
+                className="font-mono bg-zinc-900 text-white px-2"
+              >
+                <TypingEffect text="Jeansamist" />
+              </motion.span>
+              .
+            </div>
+          </div>
+          <motion.div
+            initial={{ scaleX: 0 }}
+            transition={{ duration: 0.3 }}
+            animate={{ scaleX: 1 }}
+            className="w-64 h-px bg-zinc-300"
+          ></motion.div>
+          <div className="flex items-center justify-center lg:justify-start space-x-4">
             <Link href={"https://www.instagram.com/i.am.ephra"}>
               <Instagram />
             </Link>
@@ -36,7 +61,6 @@ export const HomeHero: FunctionComponent = ({
           </div>
         </div>
       </div>
-      <Swipedown />
     </div>
   );
 };

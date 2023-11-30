@@ -10,10 +10,6 @@ export const Topbar: FunctionComponent = ({
 }: React.HTMLAttributes<HTMLElement>) => {
   const links = [
     {
-      children: "Biography",
-      href: "#biography",
-    },
-    {
       children: "Services",
       href: "#services",
     },
@@ -33,9 +29,7 @@ export const Topbar: FunctionComponent = ({
   return (
     <div className="bg-transparent">
       <div className="container flex flex-col md:flex-row md:justify-between md:h-16 gap-4 items-center p-4">
-        <div className="brand">
-          <Image src={logo_text} alt="jeansamist_logo" width={150} />
-        </div>
+        <div className="text-2xl font-extrabold">Jeansamist</div>
         <nav
           className={cn("flex items-center space-x-4 lg:space-x-6", className)}
           {...props}
@@ -44,7 +38,7 @@ export const Topbar: FunctionComponent = ({
             <Link
               href={link.href}
               key={link.children}
-              className="text-sm font-medium text-violet-950 text-muted-foreground transition-colors hover:text-violet-600"
+              className="text-sm font-medium text-zinc-950 text-muted-foreground transition-colors hover:text-zinc-600"
             >
               {link.children}
             </Link>

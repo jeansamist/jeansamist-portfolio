@@ -22,7 +22,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Balls />
-        <main className="relative z-10 min-h-screen text-violet-950">
+        <main className="relative z-10 min-h-screen text-zinc-900">
           <Topbar />
           <ScrollArea className="h-[calc(100vh-103.25px)] md:h-[calc(100vh-65px)] w-full">
             <div className="main">{children}</div>
