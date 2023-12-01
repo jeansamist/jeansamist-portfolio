@@ -14,7 +14,7 @@ export const Services: FunctionComponent = ({
       <div className="container">
         <div className="flex flex-col space-y-8 items-center ">
           <div>
-            <div className="text-5xl font-bold leading-tight  text-center">
+            <div className="text-3xl md:text-5xl font-bold leading-tight  text-center">
               <AnimatePresence>
                 <VisibilityDetector>
                   <motion.span
@@ -30,7 +30,7 @@ export const Services: FunctionComponent = ({
             </div>
           </div>
           <div className="w-64 h-px bg-zinc-300"></div>
-          <div className="leading-normal  font-medium text-center text-3xl">
+          <div className="leading-normal  font-medium text-center text-xl md:text-3xl">
             I&apos;am offering a large variety of services as a developer
           </div>
           <div className="grid md:grid-cols-2 gap-4">

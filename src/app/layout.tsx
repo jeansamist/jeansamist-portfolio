@@ -25,7 +25,7 @@ export default function RootLayout({
         <main className="relative z-10 min-h-screen text-zinc-900">
           <Topbar />
           <ScrollArea className="h-[calc(100vh-103.25px)] md:h-[calc(100vh-65px)] w-full">
-            <div className="main">{children}</div>
+            <div className="main max-w-[100vw]">{children}</div>
           </ScrollArea>
         </main>
       </body>

@@ -19,7 +19,7 @@ export const HomeHero: FunctionComponent = ({
             <Image src={me} className="w-64 h-64 object-cover" alt="me" />
           </div>
           <div>
-            <div className="text-4xl font-bold text-center leading-tight">
+            <div className="text-2xl md:text-4xl font-bold text-center leading-tight">
               Hi I&apos;m{" "}
               <motion.span
                 initial={{ opacity: 0 }}
