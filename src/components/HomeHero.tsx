@@ -19,8 +19,8 @@ export const HomeHero: FunctionComponent = ({
             <Image src={me} className="w-64 h-64 object-cover" alt="me" />
           </div>
           <div>
-            <div className="text-2xl md:text-4xl font-bold text-center leading-tight">
-              Hi I&apos;m{" "}
+            <h3 className="text-2xl md:text-4xl font-bold text-center leading-tight">
+              Hi I&apos;m <span className="hidden">BAHA Ephraim</span>
               <motion.span
                 initial={{ opacity: 0 }}
                 transition={{ duration: 0.5 }}
@@ -31,6 +31,7 @@ export const HomeHero: FunctionComponent = ({
               </motion.span>
               ,
               <br /> But you can call me{" "}
+              <span className="hidden">Jeansamist</span>
               <motion.span
                 initial={{ opacity: 0 }}
                 transition={{ duration: 1 }}
@@ -40,7 +41,7 @@ export const HomeHero: FunctionComponent = ({
                 <TypingEffect text="Jeansamist" />
               </motion.span>
               .
-            </div>
+            </h3>
           </div>
           <motion.div
             initial={{ scaleX: 0 }}

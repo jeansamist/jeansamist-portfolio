@@ -24,10 +24,10 @@ export const Topbar: FunctionComponent = ({
     },
   ];
   return (
-    <div className="bg-transparent">
+    <nav className="topbar bg-transparent">
       <div className="container flex flex-col md:flex-row md:justify-between md:h-16 gap-4 items-center p-4">
         <Link href={"/"} className="text-2xl font-extrabold">
-          Jeansamist
+          <h1>Jeansamist</h1>
         </Link>
         <nav
           className={cn("flex items-center space-x-4 lg:space-x-6", className)}
@@ -44,6 +44,6 @@ export const Topbar: FunctionComponent = ({
           ))}
         </nav>
       </div>
-    </div>
+    </nav>
   );
 };
