@@ -1,8 +1,9 @@
-import { StaticImageData } from "next/image";
+import { WorkCardProps } from "../components/WorkCard";
 
 export interface Service {
   title: string;
   shortDescription: string;
   description: string;
-  image?: StaticImageData | string;
+  stacks: number[];
+  achievements?: WorkCardProps[];
 }

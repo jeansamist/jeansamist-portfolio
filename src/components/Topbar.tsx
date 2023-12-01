@@ -1,9 +1,6 @@
-import { FunctionComponent } from "react";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-import { Input } from "@/components/ui/input";
-import Image from "next/image";
-import logo_text from "@/images/jeansamist_logo.svg";
+import { FunctionComponent } from "react";
 export const Topbar: FunctionComponent = ({
   className,
   ...props
@@ -11,15 +8,15 @@ export const Topbar: FunctionComponent = ({
   const links = [
     {
       children: "Services",
-      href: "#services",
-    },
-    {
-      children: "Skills",
-      href: "#skills",
+      href: "/services",
     },
     {
       children: "Work",
-      href: "#work",
+      href: "/work",
+    },
+    {
+      children: "Experience",
+      href: "#skills",
     },
     {
       children: "Contact",
@@ -29,7 +26,9 @@ export const Topbar: FunctionComponent = ({
   return (
     <div className="bg-transparent">
       <div className="container flex flex-col md:flex-row md:justify-between md:h-16 gap-4 items-center p-4">
-        <div className="text-2xl font-extrabold">Jeansamist</div>
+        <Link href={"/"} className="text-2xl font-extrabold">
+          Jeansamist
+        </Link>
         <nav
           className={cn("flex items-center space-x-4 lg:space-x-6", className)}
           {...props}
