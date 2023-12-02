@@ -33,7 +33,7 @@ export const Works: FunctionComponent = ({
           <div className="leading-normal  font-medium text-center text-xl md:text-3xl">
             Discover the extent of my work
           </div>
-          <div className="flex gap-16 flex-col md:flex-row">
+          <div className="w-full flex gap-16 flex-col md:flex-row">
             {[achievements[0], achievements[1]].map((achievement, key) => (
               <WorkCard {...achievement} key={key} />
             ))}

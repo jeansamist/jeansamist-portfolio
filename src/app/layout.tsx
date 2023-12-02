@@ -60,7 +60,7 @@ export default function RootLayout({
                     <Github />
                   </Link>
                 </div>
-                <span>Jeansamit@gmail.com</span>
+                <span>Jeansamist@gmail.com</span>
               </div>
             </footer>
           </ScrollArea>
