@@ -3,6 +3,7 @@ import { Balls } from "@/components/balls";
 import "@/styles/globals.css";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import type { Metadata } from "next";
+import mezinc from "@/images/profile-pic zinc.png";
 export const metadata: Metadata = {
   title: "BAHA Ephraim - Fullstack Developer",
   applicationName: "Jeansamist Portfolio",
@@ -10,6 +11,13 @@ export const metadata: Metadata = {
   description: "BAHA Ephraim (Jeansamist) portfolio",
   other: {
     "google-site-verification": "P92hAh_5MLeYb0zFXJW_SxRZPzgvyh0oZ0-e5CcxYzc",
+  },
+  openGraph: {
+    type: "website",
+    siteName: "Jeansamist",
+    title: "BAHA Ephraim - Jeansamist Portfolio",
+    description: "I am an experienced fullstack developer here is my portfolio",
+    images: [{ url: mezinc.src }],
   },
 };
 import Image from "next/image";
