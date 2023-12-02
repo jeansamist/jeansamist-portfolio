@@ -25,7 +25,7 @@ export const WorkCard: FunctionComponent<WorkCardProps> = ({
   cover,
   stacks,
 }) => (
-  <div className="max-w-full w-96 flex flex-col space-y-4 hidden-card border-b hover:border-zinc-300 border-transparent pb-8">
+  <div className="max-w-96 w-full flex flex-col space-y-4 hidden-card border-b hover:border-zinc-300 border-transparent pb-8">
     <div className="w-full aspect-video bg-zinc-300">
       <Image src={cover} alt={title} />
     </div>

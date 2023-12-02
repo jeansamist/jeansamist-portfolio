@@ -16,7 +16,7 @@ export const Topbar: FunctionComponent = ({
     },
     {
       children: "Experience",
-      href: "#skills",
+      href: "/experience",
     },
     {
       children: "Contact",

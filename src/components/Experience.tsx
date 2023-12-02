@@ -1,12 +1,12 @@
 "use client";
+import { experiences } from "@/helpers/experiences";
 import { AnimatePresence, motion } from "framer-motion";
 import { FunctionComponent } from "react";
+import { ExperienceCard } from "./ExperienceCard";
 import TypingEffect from "./TypingEffect";
 import { VisibilityDetector } from "./VisibilityDetector";
-import { achievements } from "@/helpers/achievements";
-import { WorkCard } from "./WorkCard";
 
-export const Works: FunctionComponent = ({
+export const Experience: FunctionComponent = ({
   ...props
 }: React.HTMLAttributes<HTMLElement>) => {
   return (
@@ -23,7 +23,7 @@ export const Works: FunctionComponent = ({
                     animate={{ opacity: 1 }}
                     className="font-mono bg-zinc-900 text-white px-2"
                   >
-                    <TypingEffect text="Achievements" />
+                    <TypingEffect text="Experience" />
                   </motion.span>
                 </VisibilityDetector>
               </AnimatePresence>
@@ -31,11 +31,11 @@ export const Works: FunctionComponent = ({
           </div>
           <div className="w-64 h-px bg-zinc-300"></div>
           <div className="leading-normal  font-medium text-center text-xl md:text-3xl">
-            Discover the extent of my work
+            Small part of my experience
           </div>
           <div className="flex gap-16 flex-col md:flex-row">
-            {[achievements[0], achievements[1]].map((achievement, key) => (
-              <WorkCard {...achievement} key={key} />
+            {[experiences[2], experiences[3]].map((achievement, key) => (
+              <ExperienceCard {...achievement} key={key} />
             ))}
           </div>
         </div>

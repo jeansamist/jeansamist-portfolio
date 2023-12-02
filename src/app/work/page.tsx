@@ -33,10 +33,8 @@ export default function work() {
               className="w-64 h-px bg-zinc-300"
             ></motion.div>
             <div className="text-xl text-center md:text-2xl font-medium">
-              {/* <div>+4 Projects</div> */}
               Discover the extent of my work, my achievements and my future
               projects
-              {/* <div>+3 Years of practice</div> */}
             </div>
           </div>
         </div>
@@ -70,7 +68,6 @@ export default function work() {
                 },
               },
             }}
-            aria-label="My Favorite Images"
           >
             <SplideTrack>
               {achievements.map((achievement, key) => (

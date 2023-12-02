@@ -31,7 +31,7 @@ export const Stacks: FunctionComponent = ({
           </div>
           <div className="w-64 h-px bg-zinc-300"></div>
           <div className="leading-normal  font-medium text-center text-xl md:text-3xl">
-            I&apos;am offering a large variety of services as a developer
+            The tools I work with
           </div>
           <div className="grid md:grid-cols-2 gap-4">
             <AnimatePresence>

@@ -1,12 +1,12 @@
 "use client";
-import { FunctionComponent, useState, useEffect } from "react";
 import me from "@/images/me.png";
 import Image from "next/image";
+import { FunctionComponent } from "react";
 
-import { AtSign, Github, Instagram, Twitter, ArrowDown01 } from "lucide-react";
+import { motion } from "framer-motion";
+import { Github, Instagram, Twitter } from "lucide-react";
 import Link from "next/link";
 import { TypingEffect } from "./TypingEffect";
-import { motion } from "framer-motion";
 export const HomeHero: FunctionComponent = ({
   className,
   ...props
