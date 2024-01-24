@@ -3,9 +3,27 @@ import lephenix from "@/images/lephenix.png";
 import watapp from "@/images/watapp.png";
 import uikit from "@/images/uikit.png";
 import bmo from "@/images/bmo.png";
+import challenge1 from "@/images/cover.png";
 import { stacks } from "./stacks";
 import { DiPhp } from "react-icons/di";
 export const achievements: WorkCardProps[] = [
+  
+  {
+    cover: challenge1,
+    title: "Doctor Website (Figma to code)",
+    links: [
+      {
+        name: `Open`,
+        href: "https://figma-to-code-challenge-week1-jeansamist.vercel.app/",
+      },{
+        name: `Github`,
+        href: "https://github.com/jeansamist/FigmaToCode-Challenge-Week1-Jeansamist",
+      },
+    ],
+    stacks: [stacks[0]],
+    description:
+      "This is the result of developing a figma challenge model. The main problem I encountered here was the exact reproduction of the sizes presented on the model and the use of resources because as I was coding with React + Tailwind it was not easy to find exactly the same sizes.",
+  },
   {
     cover: lephenix,
     title: "Le Phenix Website",
