@@ -6,4 +6,14 @@
   body {
     @apply bg-gunmetal text-white;
   }
+
+  .fill-effect-thumb {
+    border-radius: 50%;
+    opacity: 1 !important;
+  }
+
+  .fill-effect:hover .fill-effect-thumb {
+    transform: scale(100) !important;
+    opacity: 1 !important;
+  }
 }
