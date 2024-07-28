@@ -1,5 +1,12 @@
 import type { Config } from "tailwindcss";
+import getPalette from "tailwindcss-palette-generator";
 
+const palette = getPalette([
+  {
+    color: "#DBFF00",
+    name: "primary",
+  },
+]);
 const config: Config = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -7,11 +14,21 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    container: {
+      center: true,
+      padding: "2rem",
+      screens: {
+        "2xl": "1416px",
+      },
+    },
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      colors: {
+        background: "#040404",
+        foreground: "#969696",
+        title: "#FFFFFF",
+        primary: palette.primary,
+        muted: "#6F6F6F",
+        accent: "#101010",
       },
     },
   },
